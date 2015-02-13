@@ -1,13 +1,17 @@
+#include "QPoint"
+#include <vector>
 #ifndef PARSER_H
 #define PARSER_H
 
 
-class parser
+class Parser
 {
 public:
-    parser();
-    ~parser();
-    int returner();
+    Parser();
+    ~Parser();
+    void test();
+    void skrivTilFil(std::vector<int> punkter);
+    std::vector<int> parseFil();
 };
 
 #endif // PARSER_H

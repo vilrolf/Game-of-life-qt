@@ -15,7 +15,7 @@ public:
 
 public slots:
     void renderLater();
-    void renderNow();
+    void MainWindow::renderNow(bool super);
 
 protected:
 
@@ -24,7 +24,10 @@ protected:
     bool event(QEvent *event) Q_DECL_OVERRIDE;
     void resizeEvent(QResizeEvent *event) Q_DECL_OVERRIDE;
     void exposeEvent(QExposeEvent *event) Q_DECL_OVERRIDE;
+    void MainWindow::makeHorizontalLine(QMouseEvent *ev);
     void MainWindow::mousePressEvent(QMouseEvent *ev);
+    void MainWindow::superRender(QPainter *painter);
+
 
   //  void MainWindow::mouseMoveEvent(QMouseEvent *ev);
     void keyPressEvent(QKeyEvent* ev);
